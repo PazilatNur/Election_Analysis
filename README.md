@@ -19,7 +19,7 @@ Next let's take a look at our election results by our candidates:
 - Diana DeGette: recieved 73.8% of the total votes.
 - Raymon Anthony Doane: recieved 3.1% of the total votes.
 
-A handsome vistory is achieved by a large amount of 272,892 votes goes to **Diana DeGette**. Diana DeGette became our undouthful winner with her winning over 73% of total votes.
+A handsome vistory is achieved by a large amount of 272,892 votes goes to **Diana DeGette**. Diana DeGette became our undouthful winner with her winning over 73% of the total votes.
 
 ## Election-Audit Summary
 
@@ -30,7 +30,7 @@ Possible modifications in the future could be as follows:
 
 2. File formats has to be generally similair to the current election data csv file. 
 
-3. File path should be updated if we decided to use different path and folders for each different year's election data.
+3. File path should be updated if we decide to use different path and folders for each different year's election data.
 
 By appliying this script, we can not only avoid human error in the audit process, also get to the accurate election results a lot faster than our previous process. 
 
