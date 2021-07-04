@@ -49,17 +49,17 @@ with open(file_to_save,"w") as txt_file:
     f"-------------------------\n")
             #The "end" parameter below is added to ensure that nothing will be printed on the last line when the election_results. 
             # Anything code that is printed after print(election_results, end="") will be printed on a newline.
-
+  print(election_results)
   txt_file.write(election_results)
   txt_file.write("Election Results By Counties: \n")
-
+  print("County Votes:\n")
   for county_name in county_vote:
     c_vote=county_vote[county_name]
     c_vote_percent=(float(c_vote)/float(total_vote))*100
     c_results= (f"{county_name}: {c_vote_percent: .1f}%  ({c_vote})\n")
-    # print(c_results)
+    print(f"{county_name}: {c_vote_percent: .1f}%  ({c_vote})")
     txt_file.write(c_results)
-
+  
     if(c_vote > winning_vote) and (c_vote_percent>winning_percent):
       winning_vote=c_vote
       winning_percent=c_vote_percent
@@ -68,12 +68,14 @@ with open(file_to_save,"w") as txt_file:
   txt_file.write(f"The county with the highest turnout: {winning_county}\n")
   txt_file.write(f"-------------------------\n")
   txt_file.write("Election Results By Candidate: \n")
+  print(f"-------------------------")
+  print(f"The county with the highest turnout: {winning_county}")
+  print(f"-------------------------\n")
   for candidate_name in candidate_vote:
     votes=candidate_vote[candidate_name]
     vote_percent=(votes/total_vote)*100
-    # print(f"{candidate_name}: recieved {vote_percent:.1f}% of the total votes")
     candidate_results= (f"{candidate_name}: {vote_percent:.1f}% ({votes:,})\n")
-    
+    print(f"{candidate_name}: recieved {vote_percent:.1f}% of the total votes")
     #print(candidate_results)
     txt_file.write(candidate_results)
 
